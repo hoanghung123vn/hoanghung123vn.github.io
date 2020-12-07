@@ -1,6 +1,7 @@
 ---
 layout: post
-title:  002 Apache Druid - Install Apache Druid
+title: 002 Apache Druid - Install Apache Druid
+categories: Druid
 ---
 
 # Mục đích bài viết

@@ -1,6 +1,7 @@
 ---
 layout: post
-title:  004 Apache Druid - Writing Spec Ingestion
+title: 004 Apache Druid - Writing Spec Ingestion
+categories: Druid
 ---
 # Mục đích bài viết
 Khái niệm nhập dữ liệu trong Druid được gọi là ingestion. Trong bài viết này chúng ta sẽ cùng tìm hiểu các cách nhập dữ liệu trong Druid.

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 001 Apache Druid - Introduction To Druid
+categories: Druid
 ---
 
 # Mục đích bài viết

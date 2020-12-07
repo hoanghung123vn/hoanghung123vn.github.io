@@ -1,6 +1,7 @@
 ---
 layout: post
-title:  003 Apache Druid - Druid Ingestion
+title: 003 Apache Druid - Druid Ingestion
+categories: Druid
 ---
 # Mục đích bài viết
 Trong bài viết này chúng ta sẽ tìm hiểu cách viết một file spec để ingestion.

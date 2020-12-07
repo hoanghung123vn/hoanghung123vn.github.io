@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 003 Apache Druid - Druid Ingestion
+title: 004 Apache Druid - Writing Spec Ingestion
 categories: Druid
 ---
 # Mục đích bài viết
@@ -198,7 +198,7 @@ Cuối cùng chúng ta sẽ được 1 file spec như thế này
 Tùy vào từng kiểu nhập, sẽ có thêm các mô tả và giá trị tương ứng khác nhau.
 # Submit task ingestion
 Submit task bằng cách gọi API
-```shell
+```sh
 curl -X 'POST' -H 'Content-Type:application/json' -d @quickstart/tutorial/ingestion-tutorial-index.json http://localhost:8081/druid/indexer/v1/task
 ```
 

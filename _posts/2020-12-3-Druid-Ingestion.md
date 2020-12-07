@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 004 Apache Druid - Writing Spec Ingestion
+title: 003 Apache Druid - Druid Ingestion
 categories: Druid
 ---
 # Mục đích bài viết
@@ -50,13 +50,13 @@ Druid cung cấp cho chúng ta một số script helper, ví dụ cho việc nh�
 
 Tại thư mục gốc của Druid, chạy lệnh POST một ingestion task đến Overlord. Thư mục quickstart/tutorial chứa file spec của chúng ta:
 
-```shell
+```sh
 bin/post-index-task --file quickstart/tutorial/wikipedia-index.json --url http://localhost:8081
 ```
 
 Kết quả thu được giống như sau: 
 
-```shell
+```sh
 Beginning indexing data for wikipedia
 Task started: index_wikipedia_2018-07-27T06:37:44.323Z
 Task log:     http://localhost:8081/druid/indexer/v1/task/index_wikipedia_2018-07-27T06:37:44.323Z/log
@@ -71,7 +71,7 @@ wikipedia loading complete! You may now query your data
 3.Nhập thông qua HTTP request
 
 Druid cung cấp cho chúng ta một bộ API để tương tác với nó, để tạo 1 ingestion task, chạy lệnh sau: 
-```shell
+```sh
 curl -X 'POST' -H 'Content-Type:application/json' -d @quickstart/tutorial/wikipedia-index.json http://localhost:8081/druid/indexer/v1/task
 ```
 Kết quả thu được
@@ -83,28 +83,28 @@ Kết quả thu được
 Chúng ta sẽ thử nhập dữ liêu online với 1 hệ thống Message Queue phổ biến hiện nay đó là Kafka.
 
 Đầu tiên chúng ta cần chạy dịch vụ Kafka, download Kafka:
-```shell
+```sh
 curl -O https://archive.apache.org/dist/kafka/2.6.0/kafka_2.13-2.6.0.tgz
 tar -xzf kafka_2.13-2.6.0.tgz
 cd kafka_2.13-2.6.0
 ```
 
 Chạy Zookeeper: 
-```shell
+```sh
 bin/zookeeper-server-start.sh config/zookeeper.properties
 ```
 
 Start Kafka: 
-```shell
+```sh
 bin/kafka-server-start.sh config/server.properties
 ```
 Tạo một topic wikipedia: 
-```shell
+```sh
 bin/kafka-topics.sh --create --topic wikipedia --bootstrap-server localhost:9092
 ```
 
 Load data vào Kafka: 
-```shell
+```sh
 cd quickstart/tutorial
 gunzip -c wikiticker-2015-09-12-sampled.json.gz > wikiticker-2015-09-12-sampled.json
 ```
@@ -173,7 +173,7 @@ Submit 1 ingestion task thông qua HTTP vơi file spec wikipedia-kafka-superviso
 
 Chạy với lệnh sau:
 
-```shell
+```sh
 curl -XPOST -H'Content-Type: application/json' -d @quickstart/tutorial/wikipedia-kafka-supervisor.json http://localhost:8081/druid/indexer/v1/supervisor
 ```
 

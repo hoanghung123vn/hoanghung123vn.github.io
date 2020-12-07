@@ -13,7 +13,7 @@ Tiếp tục series tìm hiểu Apache Druid, trong bài viết này chúng ta s
 - Java 8 or later
 2. Bước 1 - Install
 - Download Druid
-```shell
+```sh
 wget https://mirror.downloadvn.com/apache/druid/0.20.0/apache-druid-0.20.0-bin.tar.gz
 tar -xzf apache-druid-0.20.0-bin.tar.gz
 cd apache-druid-0.20.0
@@ -46,7 +46,7 @@ $ ./bin/start-micro-quickstart
 Đối với những ai cuồng docker như mình thì chắc chắn cài đặt trên cluster với docker là lựa chọn số 1 rồi, bạn không cần phải care môi trường và cấu hình máy, mọi chuyện đã có docker lo. Chỉ vài bước đơn giản bạn đã có dịch vụ Druid chạy trên cluster của mình. Yêu cầu duy nhất tất nhiên là bạn cần phải có docker.
 1. Bước 1 - Docker compose
 - Thực hiện các lệnh sau để chuẩn bị chạy với docker compose:
-```shell
+```sh
 cd ~ && mkdir -p druid
 cd druid
 # Docker compose file
